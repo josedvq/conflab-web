@@ -11,9 +11,16 @@
   background-image: url(/img/circuit.jpeg);
   color: white;
 }
-
+.bannerH1 {
+  background-color: rgba(20, 40, 80, 0.8);
+  padding: 2em auto;
+}
+.bannerH1 h1 {
+  margin: 0%;
+  padding: 20px;
+}
 .bannerBox {
-  background-color: rgb(20, 40, 80);
+  background-color: rgba(20, 40, 80, 0.9);
   text-align: left;
   
   display: flex;
@@ -21,20 +28,9 @@
   width: 100%;
 }
 
-.bannerLeft {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 50%;
-}
-
-.bannerImg {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 50%;
-}
-
-.bannerImg > img {
-  width: 100%;
+.bannerBottom {
+  background-color: rgba(20, 40, 80, 0.8);
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 996px) {
@@ -49,14 +45,35 @@
   justify-content: center;
 }
 
-.hiw {
+.about {
+  display: flex;
+  flex-direction: row;
+}
+.aboutLeft {
+  flex: 2 1 66.66%;
+}
+.aboutRight {
+  flex: 1 1 33.33%;
+  padding-top: 3em;
+}
+
+.dataset {
+  display: flex;
+  flex-direction: row;
+}
+.datasetLeft {
+  flex: 1 1 60%;
   display: grid;
   grid-template-columns: 12% auto;
   grid-template-rows: repeat(5, auto);
   row-gap: 2em;
 }
 
-.hiw svg {
+.datasetRight {
+  flex: 1 1 40%;
+}
+
+.datasetLeft img {
   width: 80%;
   stroke-width: 2px;
   color: skyblue;

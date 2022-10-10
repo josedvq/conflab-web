@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import {Paper} from '@site/src/components/Paper';
+import styles from './index.module.css';
 
 const faq = [
     {
@@ -42,8 +42,16 @@ export default function Faq() {
               <div className="row">
                 <h2>Frequently-asked Questions</h2>
   
-                {papers_list.map(paper => {
-                    return <Paper {...paper}/>
+                {faq.map(faqSection => {
+                    return <>
+                        <h2>{faqSection.section}</h2>
+                        {faqSection.data.map(qna => {
+                            return <>
+                                <p className={styles.question}>{qna.q}</p>
+                                <p>{qna.a}</p>
+                            </>
+                        })}
+                    </>
                 })}
               </div>
   
@@ -52,5 +60,5 @@ export default function Faq() {
         </main>
       </Layout>
     )
-  }
+}
   

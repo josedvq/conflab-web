@@ -8,6 +8,7 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-container-width: 880px;
+  --ifm-container-width-xl: 880px;
   /* --ifm-heading-margin-top: 1em;
   --ifm-heading-margin-bottom: 0.6em; */
   --ifm-heading-font-family: 'Montserrat', sans-serif;
@@ -25,9 +26,12 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  width: 100%;
+}
 h1 {
-  
   font-weight: 200;
+  
 }
 
 h2 {

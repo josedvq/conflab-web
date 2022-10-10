@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ConfLab Dataset',
-  tagline: 'A Rich Multimodal Multisensor Dataset of Free-Standing Social Interactions in the Wild',
+  title: 'ConfLab',
+  tagline: 'A Data Collection Concept, Dataset, and Benchmark for Machine Analysis of Free-Standing Social Interactions in the Wild',
   url: 'https://conflab.ewi.tudelft.nl',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -35,6 +35,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+        }
       }),
     ],
   ],
@@ -55,6 +58,12 @@ const config = {
             label: 'Dataset',
           },
           {
+            type: 'doc',
+            position: 'right',
+            docId: 'access',
+            label: 'Docs',
+          },
+          {
             to: 'event',
             position: 'right',
             label: 'Event',
@@ -68,12 +77,7 @@ const config = {
             to: 'faq',
             position: 'right',
             label: 'FAQ',
-          },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          }
         ],
       },
       footer: {
@@ -83,8 +87,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Dataset',
-                to: 'dataset',
+                label: 'How to access',
+                to: 'docs/access',
+              },
+              {
+                label: 'Known Issues',
+                to: 'docs/issues',
               },
             ],
           },
@@ -92,16 +100,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/conflab_mm',
               },
             ],
           },
@@ -109,17 +109,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Socially Perceptive Computing Lab, TU Delft. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
