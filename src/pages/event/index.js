@@ -18,13 +18,13 @@ function HomepageHeader() {
           <div className={clsx(styles.bannerLeft)}>
 
             <div>
-              <h1>{siteConfig.title}</h1>
-              <p>{siteConfig.tagline}</p>
+              <h1>ConfLab: Meet the Chairs!</h1>
+              <p>The ConfLab event is completed. Please see <a href="/">dataset</a> for access to the data.</p>
               <div className={styles.buttons}>
                 <Link
                   className="button button--secondary button--lg"
-                  to="/docs/intro">
-                  Docusaurus Tutorial - 5min ⏱️
+                  to="/">
+                  ConfLab Dataset
                 </Link>
               </div>
             </div>
@@ -105,6 +105,39 @@ const data_list = [
   }
 ]
 
+const organizers_data = 
+{
+  text: 'ConfLab is an initiative of the Socially Perceptive Computing Lab, Delft University of Technology. We have over 10 years of experience in developing automated behavior analysis tools and collecting large scale social behavior in the wild. We are partially supported by the Dutch Research Agency (NWO) MINGLE project and the organization of ACM Multimedia 2019.',
+
+  list: [
+    {
+      title: 'Hayley Hung',
+      fig: '/img/hayley.jpg',
+      description: 'Associate Professor: Socially Perceptive Computing Lab',
+    },
+    {
+      title: 'Ekin Gedik',
+      fig: '/img/ekin.jpg',
+      description: 'Postdoctoral researcher: Multi-modal Social Experience Modelling',
+    },
+    {
+      title: 'Stephanie Tan',
+      fig: '/img/stephanie.jpg',
+      description: 'PhD Student: Multi-modal Head Pose Estimation & Conversation Detection',
+    },
+    {
+      title: 'Chirag Raman',
+      fig: '/img/chirag.jpg',
+      description: 'PhD Student: Multi-modal Group Evolution Modelling',
+    },
+    {
+      title: 'Jose Vargas',
+      fig: '/img/me.jpg',
+      description: 'PhD Student: Multi-modal Conversational Event Detection',
+    }
+  ]
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -117,7 +150,7 @@ export default function Home() {
         <section className={styles.features}>
           <div className="container">
             <div className="row">
-              <h1>How it Works</h1>
+              <h2>How it Works</h2>
 
               <div className={clsx(styles.hiw)}>
                 {hiw_list.map(el => {
@@ -134,12 +167,14 @@ export default function Home() {
             </div>
 
             <div className="row">
-              <h1>How it Works</h1>
+              <h2>What data are you contributing?</h2>
+              <p className='subtitle'>We will be collecting the following data as part of this event</p>
 
-              <div className={clsx(styles.data)}>
+
+              <div className={clsx(styles.contributing)}>
                 {data_list.map(el => {
                   return <>
-                    <img className={styles.dataImg} src={el.fig}/>
+                    <img className={styles.contributingImg} src={el.fig}/>
                     <div>
                       <h3>{el.title}</h3>
                       <p>{el.description}</p>
@@ -147,7 +182,32 @@ export default function Home() {
                   </>
                 })}
               </div>
+            </div>
+          </div>
+        </section>
+        <section style={{backgroundColor: 'rgba(238, 240, 242, 1)'}}>
+          <div className='container'>
+            <div className="row" >
 
+              <div className={clsx(styles.organizersLeft)}>
+                <div className={clsx(styles.organizersList)}>
+                  {organizers_data.list.map(el => {
+                    return <div>
+                      <img className={styles.contributingImg} src={el.fig}/>
+                      <div>
+                        <h4>{el.title}</h4>
+                        <p>{el.description}</p>
+                      </div>
+                    </div>
+                  })}
+                </div>
+              </div>
+              <div className={clsx(styles.organizersRight)}>
+                <div>
+                  <h3>Organizers</h3>
+                  <p>{organizers_data.text}</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

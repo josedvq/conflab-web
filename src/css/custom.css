@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Serif:ital@1&display=swap');
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -6,6 +7,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-container-width: 880px;
+  /* --ifm-heading-margin-top: 1em;
+  --ifm-heading-margin-bottom: 0.6em; */
+  --ifm-heading-font-family: 'Montserrat', sans-serif;
+  --ifm-heading-font-weight: 300;
+  --ifm-h1-font-size: 3rem;
+  --ifm-h2-font-size: 2.6rem;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -15,6 +23,31 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  
+  font-weight: 200;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 200;
+  margin: 1em auto 0.6em auto;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 500;
+}
+.subtitle {
+  margin: 0 auto 2em auto;
+  text-align: center;
+  font-family: 'Noto Serif', serif;
+  color: #239ddb;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
