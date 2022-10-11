@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkconflab_web=self.webpackChunkconflab_web||[]).push([[594],{3165:e=>{e.exports=JSON.parse('{"permalink":"/conflab-web/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
