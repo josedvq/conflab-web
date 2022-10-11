@@ -6,6 +6,8 @@
     display: flex;
 }
 
+
+
 .imgContainer {
     flex: 1 1;
     margin-right: 10px;
@@ -28,7 +30,6 @@
 
 .title {
     flex: 2 0;
-    font-weight: 800;
     font-size: 22px;
 }
 
@@ -37,7 +38,8 @@
 }
 
 .linkContainer {
-    display: flex,
+    display: flex;
+    margin: 0.4em auto;
 }
 
 .link {
@@ -46,3 +48,18 @@
     padding: .5rem .7rem;
     color: blue;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    .title {
+      text-align: center;
+    }
+    .img {
+      max-height: 200px;
+      width: auto;
+    }
+  }

@@ -50,14 +50,14 @@ const data_list = [
     title: 'Overhead video',
     fig: '/img/gopro.png',
     description: (
-      <p>Our newly designed MINGLE Midge wearable device  records acceleration and proximity during your interactions. Acceleration readings can be used to infer some of your actions like walking and gesturing. It is worn around the neck like a conference badge.</p>
+      <p>Overhead cameras will mounted to capture the interaction. These videos will be used to annotate behavior and for detection of social actions like speaking or of conversational groups.</p>
     ),
   },
   {
     title: 'Wearable data',
     fig: '/img/chip.png',
     description: (
-      <p>Overhead cameras will mounted to capture the interaction. These videos will be used to annotate behavior and for detection of social actions like speaking or of conversational groups.</p>
+      <p>Our newly designed MINGLE Midge wearable device  records acceleration and proximity during your interactions. Acceleration readings can be used to infer some of your actions like walking and gesturing. It is worn around the neck like a conference badge.</p>
     ),
   },
   {
@@ -84,16 +84,15 @@ const template_list = [
     codeLink: 'https://github.com/TUDelft-SPC-Lab/spcl_midge_hardware',
   },
   {
-    img: 'img/midge-render.png',
-    title: 'Time-synchronization at acquisition',
+    img: 'img/sync.png',
+    title: 'Time synchronization at acquisition',
     description: '',
-    codeLink: 'https://github.com/TUDelft-SPC-Lab/spcl_midge_hardware',
     paper: {
-      title: 'Covfee: an extensible web framework for continuous-time annotation of human behavior',
-      authors: 'Jose Vargas-Quiros, Stephanie Tan, Chirag Raman, Laura Cabrera-Quiros, and Hayley Hung',
-      publication: 'Understanding Social Behavior in Dyadic and Small Group Interactions, Proceedings of Machine Learning Research',
-      url: 'https://proceedings.mlr.press/v173/vargas-quiros22a.html',
-      date: '2022'
+      title: 'A Modular Approach for Synchronized Wireless Multimodal Multisensor Data Acquisition in Highly Dynamic Social Settings',
+      authors: 'Chirag Raman, Stephanie Tan and Hayley Hung',
+      publication: 'Proceedings of the 28th ACM International Conference on Multimedia',
+      url: 'https://doi-org.tudelft.idm.oclc.org/10.1145/3394171.3413697',
+      date: '2020'
     }
   },
   {
@@ -148,6 +147,10 @@ export default function Home() {
               <p className='subtitle'>The interaction space with 48 subjects was captured via overhead videos, in which f-formations (conversation groups) were annotated. Each person in an F-formation is associated to their body pose tracks, wearable sensor data, and speaking status labels.</p>
 
               <div className={clsx(styles.dataset)}>
+                <div className={styles.datasetRight}>
+                  <img src="img/instances.png"/>
+                </div>
+
                 <div className={styles.datasetLeft}>
                   {data_list.map(el => {
                     return <>
@@ -159,9 +162,7 @@ export default function Home() {
                     </>
                   })}
                 </div>
-                <div className={styles.datasetRight}>
-                  <img src="img/instances.png"/>
-                </div>
+                
               </div>
 
             </div>

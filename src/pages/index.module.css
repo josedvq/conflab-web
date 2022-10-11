@@ -59,18 +59,14 @@
 
 .dataset {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 .datasetLeft {
   flex: 1 1 60%;
   display: grid;
-  grid-template-columns: 12% auto;
+  grid-template-columns: 15% auto;
   grid-template-rows: repeat(5, auto);
   row-gap: 2em;
-}
-
-.datasetRight {
-  flex: 1 1 40%;
 }
 
 .datasetLeft img {
@@ -78,3 +74,23 @@
   stroke-width: 2px;
   color: skyblue;
 }
+
+.datasetRight {
+  flex: 1 1 40%;
+}
+
+/** In mobile view, switch to single column */
+@media screen and (max-width: 768px) {
+  .dataset {
+    flex-direction: column;
+    align-items: center;
+  }
+  .datasetLeft, .datasetRight {
+    flex: 1 1 auto;
+  }
+  .datasetRight {
+    margin: 2em auto;
+    max-width: 400px;
+  }
+}
+
