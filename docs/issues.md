@@ -1,4 +1,4 @@
 ---
 id: issues
-title: Known Issues
+title: Additional Documents
 ---
