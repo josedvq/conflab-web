@@ -8,16 +8,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ConfLab',
   tagline: 'A Data Collection Concept, Dataset, and Benchmark for Machine Analysis of Free-Standing Social Interactions in the Wild',
-  url: 'https://conflab.ewi.tudelft.nl',
-  baseUrl: '/',
+  url: 'https://josedvq.github.io',
+  baseUrl: '/conflab-web/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'TUDelft-SPC-Lab', // Usually your GitHub org/user name.
-  projectName: 'conflab-www', // Usually your repo name.
+  organizationName: 'josedvq', // Usually your GitHub org/user name.
+  projectName: 'conflab-web', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want

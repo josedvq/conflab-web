@@ -31,7 +31,7 @@ function HomepageHeader() {
           </div>
 
           <div className={clsx(styles.bannerImg)}>
-            <img  src="/img/lared.png"/>
+            <img  src="img/lared.png"/>
 
           </div>
           

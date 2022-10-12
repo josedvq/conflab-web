@@ -48,28 +48,28 @@ function HomepageHeader() {
 const data_list = [
   {
     title: 'Overhead video',
-    fig: '/img/gopro.png',
+    fig: 'img/gopro.png',
     description: (
       <p>Overhead cameras will mounted to capture the interaction. These videos will be used to annotate behavior and for detection of social actions like speaking or of conversational groups.</p>
     ),
   },
   {
     title: 'Wearable data',
-    fig: '/img/chip.png',
+    fig: 'img/chip.png',
     description: (
       <p>Our newly designed MINGLE Midge wearable device  records acceleration and proximity during your interactions. Acceleration readings can be used to infer some of your actions like walking and gesturing. It is worn around the neck like a conference badge.</p>
     ),
   },
   {
     title: 'F-formation annotations',
-    fig: '/img/networking.png',
+    fig: 'img/networking.png',
     description: (
       <p>The Mingle MIDGE will also record low-frequency audio. This low frequency is enough for recognizing if you are speaking, but not enough to understand the content of your speech, giving us valuable information without compromising your privacy. Example audio:</p>
     ),
   },
   {
     title: 'Survey measures',
-    fig: '/img/survey.png',
+    fig: 'img/survey.png',
     description: (
       <p>Your research interests and level of experience within the MM community will be linked to the data above via a numerical identifier.</p>
     ),
