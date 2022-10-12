@@ -50,10 +50,10 @@
   flex-direction: row;
 }
 .aboutLeft {
-  flex: 2 1 66.66%;
+  flex: 1 1 50%;
 }
 .aboutRight {
-  flex: 1 1 33.33%;
+  flex: 1 1 50%;
   padding-top: 3em;
 }
 
@@ -66,7 +66,7 @@
   display: grid;
   grid-template-columns: 15% auto;
   grid-template-rows: repeat(5, auto);
-  row-gap: 0.5em;
+  row-gap: 1em;
 }
 .datasetLeft h3 {
   margin: 0 auto 0.3em 0;

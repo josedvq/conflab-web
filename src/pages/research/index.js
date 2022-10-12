@@ -2,9 +2,13 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import {Paper} from '@site/src/components/Paper';
+import styles from './index.module.css';
 
+const papers_using_conflab = [
 
-const papers_list = [
+]
+
+const conflab_papers = [
     {
         title: 'Covfee: an extensible web framework for continuous-time annotation of human behavior',
         authors: 'Jose Vargas-Quiros, Stephanie Tan, Chirag Raman, Laura Cabrera-Quiros, and Hayley Hung',
@@ -28,6 +32,14 @@ const papers_list = [
     }
 ]
 
+const PapersList = (({papers}) => {
+  return <>
+    {papers.map(paper => {
+      return <Paper {...paper}/>
+    })}
+  </>
+})
+
 export default function Research() {
     return (
       <Layout
@@ -36,12 +48,18 @@ export default function Research() {
         <main>
           <section>
             <div className="container">
-              <div className="row">
-                <h2>Research papers</h2>
-  
-                {papers_list.map(paper => {
-                    return <Paper {...paper}/>
-                })}
+              <div className={clsx("row", styles.papersContainer)}>
+
+                <div className='papersLeft'>
+                  <h2>Contributions made for ConfLab</h2>
+                  <PapersList papers={conflab_papers}/>
+                </div>
+
+                <div className='papersRight'>
+                  <h2>Contributions using ConfLab</h2>
+                  <PapersList papers={papers_using_conflab}/>
+                </div>
+                
               </div>
   
             </div>

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import {Faq} from '@site/src/components/Faq';
 
 import styles from './index.module.css';
 
@@ -77,28 +77,28 @@ const hiw_list = [
 const data_list = [
   {
     title: 'Acceleration and proximity',
-    fig: '/img/midge.jpg',
+    fig: 'img/midge.jpg',
     description: (
       <p>Our newly designed MINGLE Midge wearable device  records acceleration and proximity during your interactions. Acceleration readings can be used to infer some of your actions like walking and gesturing. It is worn around the neck like a conference badge.</p>
     ),
   },
   {
     title: 'Video',
-    fig: '/img/gopro.jpg',
+    fig: 'img/gopro.jpg',
     description: (
       <p>Overhead cameras will mounted to capture the interaction. These videos will be used to annotate behavior and for detection of social actions like speaking or of conversational groups.</p>
     ),
   },
   {
     title: 'Low-frequency audio',
-    fig: '/img/audio.jpg',
+    fig: 'img/audio.jpg',
     description: (
       <p>The Mingle MIDGE will also record low-frequency audio. This low frequency is enough for recognizing if you are speaking, but not enough to understand the content of your speech, giving us valuable information without compromising your privacy. Example audio:</p>
     ),
   },
   {
     title: 'Survey measures',
-    fig: '/img/survey.jpg',
+    fig: 'img/survey.jpg',
     description: (
       <p>Your research interests and level of experience within the MM community will be linked to the data above via a numerical identifier.</p>
     ),
@@ -112,31 +112,61 @@ const organizers_data =
   list: [
     {
       title: 'Hayley Hung',
-      fig: '/img/hayley.jpg',
+      fig: 'img/hayley.jpg',
       description: 'Associate Professor: Socially Perceptive Computing Lab',
     },
     {
       title: 'Ekin Gedik',
-      fig: '/img/ekin.jpg',
+      fig: 'img/ekin.jpg',
       description: 'Postdoctoral researcher: Multi-modal Social Experience Modelling',
     },
     {
       title: 'Stephanie Tan',
-      fig: '/img/stephanie.jpg',
+      fig: 'img/stephanie.jpg',
       description: 'PhD Student: Multi-modal Head Pose Estimation & Conversation Detection',
     },
     {
       title: 'Chirag Raman',
-      fig: '/img/chirag.jpg',
+      fig: 'img/chirag.jpg',
       description: 'PhD Student: Multi-modal Group Evolution Modelling',
     },
     {
       title: 'Jose Vargas',
-      fig: '/img/me.jpg',
+      fig: 'img/me.jpg',
       description: 'PhD Student: Multi-modal Conversational Event Detection',
     }
   ]
 }
+
+
+const faq = [
+  {
+      section: 'Data subject FAQ',
+      data: [
+          {
+              q: 'Does my gender and age get linked to my data?',
+              a: 'No. Only your research interests and level of experience with the MM community.'
+          },
+          {
+              q: 'Who will the data be shared with?',
+              a: 'The data you donate will be shared in a pseudo-anomized form. This means that your data is linked to a numerical identifier that cannot be traced back to your identity. The data is shared under an end user license agreement (EULA) where users sign and agree to a number of restrictions on how the data is to be used and shared. '
+          },
+          {
+              q: 'What\'s in it for me? ',
+              a: 'Within a month after the end of the event, you will receive information about your behavior based on your sensor data for comparison in a pseudonymised form relative to other participants. This can be an interesting new way for you to reflect about your networking behavior. You get to reflect on the ethics of data sharing by living through the process, which could be useful for reflecting on your own research. '
+          },
+          {
+              q: 'What information do I get back about my sensor data?',
+              a: 'From the proximity sensor we will estimate how many people you interacted with compared to the distribution from all other participants.'
+          },
+          {
+              q: 'I work at a company. Can I take part?',
+              a: 'Yes! However, our ethics board do not allow us to share data for commercial or governmental research. The EULA only allows for academic research to be carried out with the data.'
+          }
+      ]
+  },
+]
+
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -185,6 +215,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section>
+          <div className="container">
+            <div className="row">
+                <Faq faq={faq}></Faq>
+            </div>
+          </div>
+        </section>
+
         <section style={{backgroundColor: 'rgba(238, 240, 242, 1)'}}>
           <div className='container'>
             <div className="row" >
@@ -212,6 +251,7 @@ export default function Home() {
           </div>
         </section>
 
+        
         
       </main>
     </Layout>

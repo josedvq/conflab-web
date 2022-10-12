@@ -78,14 +78,14 @@ const data_list = [
   },
   {
     title: 'Full body pose tracks (16min)',
-    fig: '/img/adf.png',
+    fig: 'img/poses.png',
     description: (
       <p>17 full body pose tracks annotated seperately per camera (5 cameras) for all participants in the scene.</p>
     ),
   },
   {
     title: 'Action annotations (16min)',
-    fig: '/img/adf.png',
+    fig: 'img/talking.png',
     description: (
       <p>17 full body pose tracks annotated seperately per camera (5 cameras) for all participants in the scene.</p>
     ),
@@ -151,10 +151,10 @@ export default function Home() {
               <div className={styles.about}>
                 <div className={styles.aboutLeft}>
                   <h2>About ConfLab</h2>
-                  <p>We propose ConfLab (Conference Living Lab) as a new concept for in-the-wild recording of real-life social human behavior, and provide a dataset from the first edition of ConfLab at a major international conference.</p>
+                  <p style={{fontSize: '1.4em', fontWeight: 300}}>We proposed ConfLab (Conference Living Lab) as a new concept for in-the-wild recording of real-life social human behavior, and provided a dataset from the first edition of ConfLab at ACM Multimedia 2019.</p>
                 </div>
                 <div className={styles.aboutRight}>
-                  <a class="twitter-timeline" data-height="600" href="https://twitter.com/conflab_mm?ref_src=twsrc%5Etfw">Tweets by conflab_mm</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  <a class="twitter-timeline" data-height="400" href="https://twitter.com/conflab_mm?ref_src=twsrc%5Etfw">Tweets by conflab_mm</a>
                 </div>
               </div>
             </div>

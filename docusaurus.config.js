@@ -27,6 +27,10 @@ const config = {
     locales: ['en'],
   },
 
+  scripts: [
+    "https://platform.twitter.com/widgets.js"
+  ],
+
   presets: [
     [
       'classic',
@@ -46,21 +50,21 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'ConfLab Dataset',
-        logo: {
-          alt: 'ConfLab Dataset',
-          src: 'img/logo.svg',
-        },
+        title: 'ConfLab',
+        // logo: {
+        //   alt: 'ConfLab',
+        //   src: 'img/logo.svg',
+        // },
         items: [
           {
             to: '/',
             position: 'right',
-            label: 'Dataset',
+            label: 'Home',
           },
           {
             type: 'doc',
             position: 'right',
-            docId: 'access',
+            docId: 'issues',
             label: 'Docs',
           },
           {
@@ -72,11 +76,6 @@ const config = {
             to: 'research',
             position: 'right',
             label: 'Research',
-          },
-          {
-            to: 'faq',
-            position: 'right',
-            label: 'FAQ',
           }
         ],
       },
@@ -86,10 +85,6 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {
-                label: 'How to access',
-                to: 'docs/access',
-              },
               {
                 label: 'Known Issues',
                 to: 'docs/issues',
