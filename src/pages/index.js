@@ -49,29 +49,52 @@ const data_list = [
   {
     title: 'Overhead video',
     fig: 'img/gopro.png',
-    description: (
-      <p>Overhead cameras will mounted to capture the interaction. These videos will be used to annotate behavior and for detection of social actions like speaking or of conversational groups.</p>
+    description: (<>
+      10 overhead cameras
+      <p>∼ 45 min; 1920×1080 @ 60 fps</p>
+    </>
     ),
   },
   {
     title: 'Wearable data',
     fig: 'img/chip.png',
     description: (
-      <p>Our newly designed MINGLE Midge wearable device  records acceleration and proximity during your interactions. Acceleration readings can be used to infer some of your actions like walking and gesturing. It is worn around the neck like a conference badge.</p>
+      <>
+      <p>Recorded by a badge wearable:</p>
+      <ul>
+        <li>Low-freq. audio (1250 Hz)</li>
+        <li>BT proximity (5 Hz)</li>
+        <li>9-axis IMU (56 Hz)</li>
+      </ul>
+      </>
     ),
   },
   {
-    title: 'F-formation annotations',
+    title: 'F-formation annotations (16min)',
     fig: 'img/networking.png',
     description: (
-      <p>The Mingle MIDGE will also record low-frequency audio. This low frequency is enough for recognizing if you are speaking, but not enough to understand the content of your speech, giving us valuable information without compromising your privacy. Example audio:</p>
+      <p>Annotated at 1Hz for 16 min of interaction.</p>
+    ),
+  },
+  {
+    title: 'Full body pose tracks (16min)',
+    fig: '/img/adf.png',
+    description: (
+      <p>17 full body pose tracks annotated seperately per camera (5 cameras) for all participants in the scene.</p>
+    ),
+  },
+  {
+    title: 'Action annotations (16min)',
+    fig: '/img/adf.png',
+    description: (
+      <p>17 full body pose tracks annotated seperately per camera (5 cameras) for all participants in the scene.</p>
     ),
   },
   {
     title: 'Survey measures',
     fig: 'img/survey.png',
     description: (
-      <p>Your research interests and level of experience within the MM community will be linked to the data above via a numerical identifier.</p>
+      <p>Data subjects reported research interests and level of experience within the MM community.</p>
     ),
   }
 ]
@@ -128,7 +151,7 @@ export default function Home() {
               <div className={styles.about}>
                 <div className={styles.aboutLeft}>
                   <h2>About ConfLab</h2>
-                  <p>ConfLab is a multimodal multisensor dataset of in-the-wild free-standing social conversations. It records a real-life professional networking event at the international conference ACM Multimedia 2019. Involving 48 conference attendees, the dataset captures a diverse mix of status, acquaintance, and networking motivations. Our capture setup improves upon the data fidelity of prior in-the-wild datasets while : 8 overhead-perspective videos (1920 x 1080, 60fps), and custom personal wearable sensors with onboard recording of body motion (full 9-axis IMU), privacy-preserving low-frequency audio (1250Hz), and Bluetooth-based proximity. Additionally, we developed custom solutions for distributed hardware synchronization at acquisition, and time-efficient continuous annotation of body keypoints and actions at high sampling rates.</p>
+                  <p>We propose ConfLab (Conference Living Lab) as a new concept for in-the-wild recording of real-life social human behavior, and provide a dataset from the first edition of ConfLab at a major international conference.</p>
                 </div>
                 <div className={styles.aboutRight}>
                   <a class="twitter-timeline" data-height="600" href="https://twitter.com/conflab_mm?ref_src=twsrc%5Etfw">Tweets by conflab_mm</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
