@@ -5,7 +5,13 @@ import {Paper} from '@site/src/components/Paper';
 import styles from './index.module.css';
 
 const papers_using_conflab = [
-
+  {
+    title: 'Conversation Group Detection With Spatio-Temporal Context',
+    authors: 'Stephanie Tan, David MJ Tax, Hayley Hung',
+    publication: 'arXiv preprint',
+    url: 'https://arxiv.org/abs/2206.02559',
+    date: '2022'
+  }
 ]
 
 const conflab_papers = [
