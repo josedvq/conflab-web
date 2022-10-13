@@ -3,15 +3,12 @@
     flex-direction: row;
 }
 
-.papersLeft, .papersRight{
-    flex: 1 1 50%;
+.paperList > div {
+    margin-bottom: 1em;
 }
 
 @media screen and (max-width: 768px) {
     .papersContainer {
         flex-direction: column;
-    }
-    .papersLeft, .papersRight{
-        flex: 1 1 50%;
     }
 }

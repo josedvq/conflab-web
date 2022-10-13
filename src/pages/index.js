@@ -80,14 +80,14 @@ const data_list = [
     title: 'Full body pose tracks (16min)',
     fig: 'img/poses.png',
     description: (
-      <p>17 full body pose tracks annotated seperately per camera (5 cameras) for all participants in the scene.</p>
+      <p>Full body pose tracks (17 body joints) annotated seperately per camera (5 cameras) for all participants in the scene.</p>
     ),
   },
   {
     title: 'Action annotations (16min)',
     fig: 'img/talking.png',
     description: (
-      <p>17 full body pose tracks annotated seperately per camera (5 cameras) for all participants in the scene.</p>
+      <p>Speaking status (binary) annotated continuously (60Hz) for all participants in the scene.</p>
     ),
   },
   {
@@ -121,7 +121,12 @@ const template_list = [
   {
     img: 'img/covfee.jpg',
     title: 'Continuous annotation of keypoints and actions',
-    description: 'ConfLab is the first large-scale mingling dataset to be annotated for full-body poses. This was possible by using continuous annotation techniques for both keypoints and actions. In pilot studies we measured a 3x speed up in keypoint annotation when using our continuous method when compared to the traditional technique of annotating every frame, followed by interpolation. Our continuous methods are implemented and made available as part of the Covfee framework.',
+    description: <>
+      <p>ConfLab is the first large-scale mingling dataset to be annotated for full-body poses. This was possible by using continuous annotation techniques for both keypoints and actions. In pilot studies we measured a 3x speed up in keypoint annotation when using our continuous method when compared to the traditional technique of annotating every frame, followed by interpolation.</p>
+      <p>The following video shows some of the dataset and annotation interface:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/X8ahEd5GZW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>Our continuous methods are implemented and made available as part of the Covfee framework.</p>
+    </>,
     codeLink: 'https://github.com/josedvq/covfee',
     liveLink: 'https://josedvq.github.io/covfee/',
     paper: {
@@ -210,8 +215,18 @@ export default function Home() {
         </section>
 
         <section>
-        <a href="https://www.flaticon.com/free-icons/teamwork" title="teamwork icons">Teamwork icons created by Becris - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/survey" title="survey icons">Survey icons created by Freepik - Flaticon</a>
+        <div className="container">
+            <div className="row">
+              <div className={styles.attribution}>
+                <a href="https://www.flaticon.com/free-icons/gopro" title="gopro icons">Gopro icons created by Roundicons Premium - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/chip" title="chip icons">Chip icons created by smalllikeart - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/group" title="group icons">Group icons created by Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/speaking" title="speaking icons">Speaking icons created by Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/survey" title="survey icons">Survey icons created by Freepik - Flaticon</a>
+              </div>
+             
+            </div>
+          </div>
         </section>
       </main>
     </Layout>

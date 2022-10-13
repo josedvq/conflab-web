@@ -97,3 +97,12 @@
   }
 }
 
+.attribution {
+  width: 100%;
+  text-align: right;
+  margin: 1em 0;
+}
+.attribution > a {
+  font-size: 0.8em;
+  display: block;
+}

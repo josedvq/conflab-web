@@ -110,7 +110,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Socially Perceptive Computing Lab, TU Delft. Built with Docusaurus.`,
+        copyright: `<span>Copyright © ${new Date().getFullYear()} Socially Perceptive Computing Lab, TU Delft. Built by <a href="https://josedvq.github.io/">Jose Vargas Quiros</a> with Docusaurus.</span>`,
       },
       prism: {
         theme: lightCodeTheme,
